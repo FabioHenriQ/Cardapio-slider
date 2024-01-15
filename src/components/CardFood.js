@@ -72,11 +72,13 @@ class CardFood extends HTMLElement {
             <div class="container-img-options">
                 <img src="${this.getAttribute("image-card-options1")}" alt="">
             </div>
-            <p>adawd</p>
-            <p>calorias</p>
-            <div class="card_options_price">
-                <p>R$2.25</p>
-                <button>+</button>
+            <div class="container-info-options">
+                <p>Ice-Cream</p>
+                <p>calorias</p>
+                <div class="card_options_price">
+                    <p>R$2.25</p>
+                    <button style="background-color:#c61c1c;">+</button>
+                </div>
             </div>
         `;
 
@@ -86,11 +88,13 @@ class CardFood extends HTMLElement {
             <div class="container-img-options">
                 <img src="${this.getAttribute("image-card-options2")}" alt="">
             </div>
-            <p>adawd</p>
-            <p>calorias</p>
-            <div class="card_options_price">
-                <p>R$2.25</p>
-                <button>+</button>
+            <div class="container-info-options">
+                <p>Cake</p>
+                <p>calorias</p>
+                <div class="card_options_price">
+                    <p>R$2.25</p>
+                    <button>+</button>
+                </div>
             </div>
         `
         
@@ -147,18 +151,36 @@ class CardFood extends HTMLElement {
             .container_options {
                 display: flex;
                 padding: 0 50% 0 10%;
-                gap: 5%;
+                gap: 10%;
             }
             .card_options1, .card_options2 {
-                border: 1px solid red;
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                padding: 10px 30px;
+                border: 1px solid #fff;
+                border-radius: 15px;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.342);
+                transition: 1s;
+            }
+            .card_options2 {
+                background-color: #c61c1c;
+                color: #fff;
+            }
+            .card_options1:hover, .card_options2:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.34);
             }
             .container-img-options {
                 position: absolute;
                 top: -40px;
                 left: 0;
-                height: 100%;
-                width: 100%;
+                margin-left: 16px; 
+                height: 50%;
+                width: 80%;
+            }
+            .container-info-options {
+                padding-top: 25px;
             }
             .container-img-options img{
                 height: 100%;
@@ -182,7 +204,7 @@ class CardFood extends HTMLElement {
                 position: relative;
             }
             .card__right:hover {
-                transform: scale(1.1);
+                transform: scale(1.06);
             }
             .artBackground {
                 height: 100%;
