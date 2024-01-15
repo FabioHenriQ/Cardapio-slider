@@ -24,11 +24,11 @@ class CardFood extends HTMLElement {
 
         // ------------- Card__left
         // title
-        const title_food = document.createElement("h1");
+        const title_food = document.createElement("h2");
         title_food.textContent = this.getAttribute("title_food");
         title_food.setAttribute("class", "title_food");
 
-        const second_title_food = document.createElement("h2");
+        const second_title_food = document.createElement("h3");
         second_title_food.textContent = this.getAttribute("second_title_food");
         second_title_food.setAttribute("class", "second_title_food");
 
@@ -66,9 +66,39 @@ class CardFood extends HTMLElement {
         const container_options = document.createElement("div");
         container_options.setAttribute("class", "container_options");
 
+        const card_options1 = document.createElement("div");
+        card_options1.setAttribute("class", "card_options1");
+        card_options1.innerHTML = `
+            <div class="container-img-options">
+                <img src="${this.getAttribute("image-card-options1")}" alt="">
+            </div>
+            <p>adawd</p>
+            <p>calorias</p>
+            <div class="card_options_price">
+                <p>R$2.25</p>
+                <button>+</button>
+            </div>
+        `;
 
+        const card_options2 = document.createElement("div");
+        card_options2.setAttribute("class", "card_options2");
+        card_options2.innerHTML = `
+            <div class="container-img-options">
+                <img src="${this.getAttribute("image-card-options2")}" alt="">
+            </div>
+            <p>adawd</p>
+            <p>calorias</p>
+            <div class="card_options_price">
+                <p>R$2.25</p>
+                <button>+</button>
+            </div>
+        `
         
+
+        container_options.appendChild(card_options1);
+        container_options.appendChild(card_options2);
         
+        // Integration
         card__left.appendChild(container_title);
         card__left.appendChild(container_description_buttons_food);
         card__left.appendChild(container_options);
@@ -103,13 +133,40 @@ class CardFood extends HTMLElement {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: space-around;
             }
             .container_title {
 
             }
             .container_buttons_food {
                 display: flex;
-                gap: 20px;
+                justify-content: space-around;
+            }
+            .container_options {
+                display: flex;
+                padding: 0 50% 0 10%;
+                gap: 5%;
+            }
+            .card_options1, .card_options2 {
+                border: 1px solid red;
+                position: relative;
+            }
+            .container-img-options {
+                position: absolute;
+                top: -40px;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+            .container-img-options img{
+                height: 100%;
+                width: 100%;
+            }
+            .card_options_price {
+                display: flex;
+                justify-content: space-around;
             }
             .card__right {
                 height: 100%;
