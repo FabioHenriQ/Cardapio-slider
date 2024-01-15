@@ -20,9 +20,61 @@ class CardFood extends HTMLElement {
         const card__right = document.createElement("div");
         card__right.setAttribute("class", "card__right");
         componentRoot.appendChild(card__right);
-        // Card__left
 
-        // Card__right
+
+        // ------------- Card__left
+        // title
+        const title_food = document.createElement("h1");
+        title_food.textContent = this.getAttribute("title_food");
+        title_food.setAttribute("class", "title_food");
+
+        const second_title_food = document.createElement("h2");
+        second_title_food.textContent = this.getAttribute("second_title_food");
+        second_title_food.setAttribute("class", "second_title_food");
+
+        const container_title = document.createElement("div");
+        container_title.setAttribute("class", "container_title");
+        container_title.appendChild(title_food);
+        container_title.appendChild(second_title_food);
+
+        // description and buttons
+        const description_food = document.createElement("p");
+        description_food.textContent = this.getAttribute("description_food");
+        description_food.setAttribute("class", "description_food");
+
+        const container_description_buttons_food = document.createElement("div");
+        container_description_buttons_food.setAttribute("class", "container_description_buttons_food");
+
+        // buttons
+        const button_description_food1 = document.createElement("button");
+        button_description_food1.textContent = this.getAttribute("button_description_food1");
+        description_food.setAttribute("class", "button_description_food1");
+
+        const button_description_food2 = document.createElement("button");
+        button_description_food2.textContent = this.getAttribute("button_description_food2");
+        description_food.setAttribute("class", "button_description_food2");
+
+        const container_buttons_food = document.createElement("div");
+        container_buttons_food.setAttribute("class", "container_buttons_food");
+        container_buttons_food.appendChild(button_description_food1);
+        container_buttons_food.appendChild(button_description_food2);
+
+        container_description_buttons_food.appendChild(description_food);
+        container_description_buttons_food.appendChild(container_buttons_food);
+
+        // options
+        const container_options = document.createElement("div");
+        container_options.setAttribute("class", "container_options");
+
+
+        
+        
+        card__left.appendChild(container_title);
+        card__left.appendChild(container_description_buttons_food);
+        card__left.appendChild(container_options);
+
+
+        // ------------- Card__right
         const artBackground = document.createElement("div");
         artBackground.setAttribute("class", "artBackground");
 
@@ -43,10 +95,21 @@ class CardFood extends HTMLElement {
                 background-color: #fff;
                 position: relative;
                 overflow: hidden;
+                border: 2px solid #fff;
+                box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.342);
             }
             .card__left {
                 height: 100%;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .container_title {
+
+            }
+            .container_buttons_food {
+                display: flex;
+                gap: 20px;
             }
             .card__right {
                 height: 100%;
