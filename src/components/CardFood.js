@@ -123,6 +123,7 @@ class CardFood extends HTMLElement {
         style.textContent = `
             .card {
                 height: 100%;
+                padding-bottom: 10px;
                 width: 100%;
                 border-radius: 45px;
                 display: flex;
@@ -137,19 +138,39 @@ class CardFood extends HTMLElement {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
             }
             .container_title, .container_description_buttons_food, .container_options{
                 padding-left: 15%;
             }
             .container_title {
-                background: linear-gradient(to right, #c61c1c5a, transparent 40%)
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                min-height: 160px;
+                justify-content: center;
+                background: linear-gradient(to right, #c61c1c5a, transparent 80%);
+            }
+            .title_food {
+                font-size: 60px;
+                line-height: 60px;
+                color: #c61c1c;
+                font-weight: 800;
+                margin: 0;
+            }
+            .second_title_food {
+                margin: 4px;
+                font-weight: 300;
+                font-size: 35px;
+            }
+            .description_food {
+                font-weight: 300;
             }
             .container_description_buttons_food {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
             }
+            
             .container_buttons_food {
                 display: flex;
                 gap: 5%;
@@ -175,6 +196,8 @@ class CardFood extends HTMLElement {
             }
 
             .container_options {
+                margin-top: 10%;
+                margin-bottom: 5%;
                 display: flex;
                 gap: 10%;
             }
@@ -183,7 +206,7 @@ class CardFood extends HTMLElement {
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
-                padding: 10px 30px;
+                padding: 0px 30px;
                 border: 1px solid #fff;
                 border-radius: 15px;
                 box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.342);
@@ -202,12 +225,21 @@ class CardFood extends HTMLElement {
                 top: -40px;
                 left: 0;
                 margin-left: 16px; 
-                height: 50%;
+                height: 40%;
                 width: 80%;
             }
             .container-info-options {
                 padding-top: 25px;
                 text-align: center;
+            }
+            .container-info-options p:nth-child(1) {
+                font-weight: 600;
+                font-size: 1.1rem;
+                max-width: 90px;
+            }
+            .container-info-options p:nth-child(2) {
+                font-weight: 200;
+                margin: 0;
             }
             .container-img-options img{
                 height: 100%;
@@ -230,10 +262,7 @@ class CardFood extends HTMLElement {
             .card_options1 .card_options_price button {
                 color: #fff;
             }
-            .card_options_price button:hover {
-                transform: scale(1.1);
-            }
-            
+
 
 
 
@@ -259,10 +288,10 @@ class CardFood extends HTMLElement {
                 left: 50%;
                 position: absolute;
 
-                background-image: url(${this.getAttribute("link-image-background")});
+                background-image: url('./src/assets/images/background-red.png');
                 background-repeat: no-repeat;
-                background-size: contain;
-                background-position: top;
+                background-size: 60%;
+                background-position: left;
             }
 
         `;
