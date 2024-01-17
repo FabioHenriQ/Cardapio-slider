@@ -48,11 +48,11 @@ class CardFood extends HTMLElement {
         // buttons
         const button_description_food1 = document.createElement("button");
         button_description_food1.textContent = this.getAttribute("button_description_food1");
-        description_food.setAttribute("class", "button_description_food1");
+        button_description_food1.setAttribute("class", "button_description_food1 button");
 
         const button_description_food2 = document.createElement("button");
         button_description_food2.textContent = this.getAttribute("button_description_food2");
-        description_food.setAttribute("class", "button_description_food2");
+        button_description_food2.setAttribute("class", "button_description_food2 button");
 
         const container_buttons_food = document.createElement("div");
         container_buttons_food.setAttribute("class", "container_buttons_food");
@@ -73,8 +73,8 @@ class CardFood extends HTMLElement {
                 <img src="${this.getAttribute("image-card-options1")}" alt="">
             </div>
             <div class="container-info-options">
-                <p>Ice-Cream</p>
-                <p>calorias</p>
+                <p>${this.getAttribute("option1")}</p>
+                <p>10 caloria</p>
                 <div class="card_options_price">
                     <p>R$2.25</p>
                     <button style="background-color:#c61c1c;">+</button>
@@ -89,7 +89,7 @@ class CardFood extends HTMLElement {
                 <img src="${this.getAttribute("image-card-options2")}" alt="">
             </div>
             <div class="container-info-options">
-                <p>Cake</p>
+                <p>${this.getAttribute("option2")}</p>
                 <p>calorias</p>
                 <div class="card_options_price">
                     <p>R$2.25</p>
@@ -137,26 +137,46 @@ class CardFood extends HTMLElement {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                text-align: center;
-                align-items: center;
                 justify-content: space-around;
+            }
+            .container_title, .container_description_buttons_food, .container_options{
+                padding-left: 8%;
             }
             .container_title {
 
             }
             .container_buttons_food {
                 display: flex;
-                justify-content: space-around;
+                gap: 5%;
             }
+            .button {
+                width: 30%;
+                border-radius: 30px;
+                border: 0;
+                padding: 13px;
+                font-size: 15px;
+                font-weight: 400;
+                box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.342);
+                transition: .5s;
+            }
+            .button:nth-child(1) {
+                background-color: #c61c1c; 
+                color: #fff;
+            }
+            .button:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.342);
+            }
+
             .container_options {
                 display: flex;
-                padding: 0 50% 0 10%;
-                gap: 10%;
+                gap: 3%;
             }
             .card_options1, .card_options2 {
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                justify-content: end;
                 padding: 10px 30px;
                 border: 1px solid #fff;
                 border-radius: 15px;
@@ -181,6 +201,7 @@ class CardFood extends HTMLElement {
             }
             .container-info-options {
                 padding-top: 25px;
+                text-align: center;
             }
             .container-img-options img{
                 height: 100%;
@@ -189,7 +210,22 @@ class CardFood extends HTMLElement {
             .card_options_price {
                 display: flex;
                 justify-content: space-around;
+                gap: 20%;
             }
+            .card_options_price button {
+                align-self: center;
+                border-radius: 5px;
+                border: 0;
+                transition: .5s;
+                font-size: 20px;
+            }
+            .card_options_price button:hover {
+                transform: scale(1.1);
+            }
+            
+
+
+
             .card__right {
                 height: 100%;
                 width: 100%;
