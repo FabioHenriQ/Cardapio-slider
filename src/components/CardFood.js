@@ -124,7 +124,7 @@ class CardFood extends HTMLElement {
             .card {
                 height: 100%;
                 width: 100%;
-                border-radius: 50px;
+                border-radius: 45px;
                 display: flex;
                 background-color: #fff;
                 position: relative;
@@ -140,16 +140,22 @@ class CardFood extends HTMLElement {
                 justify-content: space-around;
             }
             .container_title, .container_description_buttons_food, .container_options{
-                padding-left: 8%;
+                padding-left: 15%;
             }
             .container_title {
-
+                background: linear-gradient(to right, #c61c1c5a, transparent 40%)
+            }
+            .container_description_buttons_food {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
             }
             .container_buttons_food {
                 display: flex;
                 gap: 5%;
             }
             .button {
+                cursor: pointer;
                 width: 30%;
                 border-radius: 30px;
                 border: 0;
@@ -170,7 +176,7 @@ class CardFood extends HTMLElement {
 
             .container_options {
                 display: flex;
-                gap: 3%;
+                gap: 10%;
             }
             .card_options1, .card_options2 {
                 position: relative;
@@ -218,6 +224,11 @@ class CardFood extends HTMLElement {
                 border: 0;
                 transition: .5s;
                 font-size: 20px;
+                cursor: pointer;
+                color: #c61c1c;
+            }
+            .card_options1 .card_options_price button {
+                color: #fff;
             }
             .card_options_price button:hover {
                 transform: scale(1.1);
