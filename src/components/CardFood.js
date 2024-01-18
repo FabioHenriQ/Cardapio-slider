@@ -74,9 +74,9 @@ class CardFood extends HTMLElement {
             </div>
             <div class="container-info-options">
                 <p>${this.getAttribute("option1")}</p>
-                <p>10 caloria</p>
+                <p>57 calorias, 2 Pessoas</p>
                 <div class="card_options_price">
-                    <p>R$2.25</p>
+                    <p>R$6,00</p>
                     <button style="background-color:#c61c1c;">+</button>
                 </div>
             </div>
@@ -90,9 +90,9 @@ class CardFood extends HTMLElement {
             </div>
             <div class="container-info-options">
                 <p>${this.getAttribute("option2")}</p>
-                <p>calorias</p>
+                <p>203 calorias 3 Pessoas</p>
                 <div class="card_options_price">
-                    <p>R$2.25</p>
+                    <p>R$10,55</p>
                     <button>+</button>
                 </div>
             </div>
@@ -239,6 +239,7 @@ class CardFood extends HTMLElement {
             }
             .container-info-options p:nth-child(2) {
                 font-weight: 200;
+                max-width: 90px;
                 margin: 0;
             }
             .container-img-options img{
