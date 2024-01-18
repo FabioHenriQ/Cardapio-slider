@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 body {
-    padding: 3% 5%;
+    padding: 1.5% 5%;
     height: 100vh;
     background: #ff3e0eee;
     background-image: url("../assets/images/background.png");
@@ -18,7 +18,7 @@ body {
     height: 100%;
     overflow: hidden;
     border-radius: 45px;
-    border-bottom: 1px solid #fff;
+    border: 2px solid #fff;
 }
 .slider-content {
     height: 100%;

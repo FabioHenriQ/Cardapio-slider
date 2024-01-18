@@ -125,12 +125,10 @@ class CardFood extends HTMLElement {
                 height: 100%;
                 padding-bottom: 10px;
                 width: 100%;
-                border-radius: 45px;
                 display: flex;
                 background-color: #fff;
                 position: relative;
                 overflow: hidden;
-                border: 2px solid #fff;
             }
             .card__left {
                 height: 100%;
