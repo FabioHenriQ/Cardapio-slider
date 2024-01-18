@@ -39,7 +39,7 @@ body {
 .nav-manual, .nav-auto {
     position: absolute;
     width: 90%;
-    margin-top: 40%;
+    margin-top: 38%;
     display: flex;
     justify-content: center;
 }
@@ -85,4 +85,20 @@ body {
     to {
         background-size: 90%;
     }
+}
+
+@media screen and (max-width: 580px) {
+    body {
+        padding: .1% .1%;
+    }
+    .slider {
+        height: 200vh;
+        border-radius: 0;
+    }
+    .nav-manual, .nav-auto {
+        margin-top: 90vh;
+        position: fixed;
+        z-index: 2;
+    }
+    
 }

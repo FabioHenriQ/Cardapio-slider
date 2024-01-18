@@ -224,6 +224,7 @@ class CardFood extends HTMLElement {
                 margin-left: 16px; 
                 height: 40%;
                 width: 80%;
+                outline: none;
             }
             .container-info-options {
                 padding-top: 25px;
@@ -242,6 +243,7 @@ class CardFood extends HTMLElement {
             .container-img-options img{
                 height: 100%;
                 width: 100%;
+                outline: none;
             }
             .card_options_price {
                 display: flex;
@@ -290,6 +292,28 @@ class CardFood extends HTMLElement {
                 background-repeat: no-repeat;
                 background-size: 60%;
                 background-position: left;
+            }
+
+            @media screen and (max-width: 580px) {
+                .card {
+                    flex-direction: column;
+                    min-height: 200vh;
+                }
+                .card__left {
+                    height: 100%;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .container_title, .container_description_buttons_food, .container_options{
+                    padding: 5px;
+                }
+                .artBackground {
+                    z-index: 0;
+                    bottom: -35%;
+                    left: 20%;
+                    background-size: 100%;
+                }
             }
 
         `;
