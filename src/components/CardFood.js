@@ -131,7 +131,6 @@ class CardFood extends HTMLElement {
                 position: relative;
                 overflow: hidden;
                 border: 2px solid #fff;
-                box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.342);
             }
             .card__left {
                 height: 100%;

@@ -19,36 +19,91 @@
 </head>
 <body>
 
-    <div class="slider">
-        <div class="slide">
-            <card-food 
-                link-image-food="./src/assets/images/pratos-combinados.png"
-                title_food="Pratos Combinados"
-                second_title_food="Com a melhor sobremesa!"
-                description_food="Lorem ipsum dolor sitdunt ut labore veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor"
-                button_description_food1="Ver Menu"
-                button_description_food2="Reservar Mesa"
-                option1="Sorvete"
-                option2="Bolo de Chocolate"
-                image-card-options1="./src/assets/images/sobremesa2.png"
-                image-card-options2="./src/assets/images/sobremesa1.png"
-            ></card-food>
+    <section class="slider">
+        <div class="slider-content">
 
-            <card-food 
-                link-image-food="./src/assets/images/prato-com-peixe.png"
-                title_food="Prato Com Peixe"
-                second_title_food="Com a melhor sobremesa!"
-                description_food="Lorem ipsum dolor sitdunt ut labore veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor"
-                button_description_food1="Ver Menu"
-                button_description_food2="Reservar Mesa"
-                option1="Sorvete"
-                option2="Bolo de Chocolate"
-                image-card-options1="./src/assets/images/sobremesa2.png"
-                image-card-options2="./src/assets/images/sobremesa1.png"
-            ></card-food>
+            <input type="radio" name="btn-radio" id="radio1" placeholder="/">
+            <input type="radio" name="btn-radio" id="radio2" placeholder="/">
+            <input type="radio" name="btn-radio" id="radio3" placeholder="/">
+            <input type="radio" name="btn-radio" id="radio4" placeholder="/">
+
+            <div class="slide first">
+                <card-food 
+                    link-image-food="./src/assets/images/pratos-combinados.png"
+                    title_food="Pratos Combinados"
+                    second_title_food="Com a melhor sobremesa!"
+                    description_food="Lorem ipsum dolor sitdunt ut labore veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor"
+                    button_description_food1="Ver Menu"
+                    button_description_food2="Reservar Mesa"
+                    option1="Sorvete"
+                    option2="Bolo de Chocolate"
+                    image-card-options1="./src/assets/images/sobremesa2.png"
+                    image-card-options2="./src/assets/images/sobremesa1.png"
+                ></card-food>
+            </div>
+
+            <div class="slide">
+                <card-food 
+                    link-image-food="./src/assets/images/prato-com-peixe.png"
+                    title_food="Prato com Peixe"
+                    second_title_food="Com a melhor sobremesa!"
+                    description_food="Lorem ipsum dolor sitdunt ut labore veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor"
+                    button_description_food1="Ver Menu"
+                    button_description_food2="Reservar Mesa"
+                    option1="Sorvete"
+                    option2="Bolo de Chocolate"
+                    image-card-options1="./src/assets/images/sobremesa2.png"
+                    image-card-options2="./src/assets/images/sobremesa1.png"
+                ></card-food>
+            </div>
+
+            <div class="slide">
+                <card-food 
+                    link-image-food="./src/assets/images/Prato-feijoada.png"
+                    title_food="Feijoada"
+                    second_title_food="Com a melhor sobremesa!"
+                    description_food="Lorem ipsum dolor sitdunt ut labore veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor"
+                    button_description_food1="Ver Menu"
+                    button_description_food2="Reservar Mesa"
+                    option1="Sorvete"
+                    option2="Bolo de Chocolate"
+                    image-card-options1="./src/assets/images/sobremesa2.png"
+                    image-card-options2="./src/assets/images/sobremesa1.png"
+                ></card-food>
+            </div>
+
+            <div class="slide">
+                <card-food 
+                    link-image-food="./src/assets/images/prato-feito-png-2.png"
+                    title_food="Prato com Frango"
+                    second_title_food="Com a melhor sobremesa!"
+                    description_food="Lorem ipsum dolor sitdunt ut labore veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor"
+                    button_description_food1="Ver Menu"
+                    button_description_food2="Reservar Mesa"
+                    option1="Sorvete"
+                    option2="Bolo de Chocolate"
+                    image-card-options1="./src/assets/images/sobremesa2.png"
+                    image-card-options2="./src/assets/images/sobremesa1.png"
+                ></card-food>
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        
         </div>
-
-    </div>
+    </section>
+    
 
 </body>
 </html>
