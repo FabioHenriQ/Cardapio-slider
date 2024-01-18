@@ -294,25 +294,36 @@ class CardFood extends HTMLElement {
                 background-position: left;
             }
 
-            @media screen and (max-width: 580px) {
+            @media screen and (max-width: 768px) {
                 .card {
                     flex-direction: column;
-                    min-height: 200vh;
+                    min-height: 100vh;
                 }
                 .card__left {
                     height: 100%;
                     width: 100%;
+                    padding: 0;
                     justify-content: center;
                     align-items: center;
+                }
+                .card__right {
+                    height: 30%;
                 }
                 .container_title, .container_description_buttons_food, .container_options{
                     padding: 5px;
                 }
+                .container_options {
+                    margin-top: 10%;
+                    margin-bottom: 0%;
+                    display: flex;
+                    gap: 10%;
+                }
                 .artBackground {
                     z-index: 0;
-                    bottom: -35%;
-                    left: 20%;
+                    bottom: -40%;
                     background-size: 100%;
+                    background-position: bottom;
+                    transform: rotate(90deg);
                 }
             }
 
