@@ -1,11 +1,11 @@
-var radio = document.querySelector('.manual-btn');
+var radio = document.querySelectorAll('.manual-btn');
 let cont = 1;
 
 document.getElementById('radio1').checked = true;
 
-setInterval(()=>{
+let interval = setInterval(()=>{
     nextImg();
-}, 8000);
+}, 5000);
 
 function nextImg() {
     cont++;
@@ -13,4 +13,15 @@ function nextImg() {
         cont = 1;
     }
     document.getElementById('radio' + cont).checked = true;
+}
+
+for (let i = 0; i < radio.length; i++){
+    radio[i].addEventListener('click', ()=> {
+        clearInterval(interval);
+        setTimeout(()=>{
+            interval = setInterval(()=>{
+                nextImg();
+            }, 5000);
+        },20000)
+    })
 }
