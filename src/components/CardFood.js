@@ -302,6 +302,7 @@ class CardFood extends HTMLElement {
                 .card__left {
                     width: 100%;
                     padding: 0;
+                    justify-content: space-around;
                 }
                 .card__right {
                     height: 30%;
