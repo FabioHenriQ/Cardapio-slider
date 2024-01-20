@@ -50,6 +50,7 @@ body {
     cursor: pointer;
     z-index: 2;
     transition: .5s;
+    
 }
 .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
     margin-right: 10px;
@@ -87,9 +88,10 @@ body {
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 980px) {
     body {
         padding: .1% .1%;
+        animation-name: none;
     }
     .slider {
         height: 200vh;
@@ -97,6 +99,8 @@ body {
     }
     .nav-manual, .nav-auto {
         margin-top: 90vh;
+        width: 100%;
+        justify-content: center;
         position: fixed;
         z-index: 2;
     }
