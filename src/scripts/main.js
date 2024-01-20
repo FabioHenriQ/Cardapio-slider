@@ -18,10 +18,5 @@ function nextImg() {
 for (let i = 0; i < radio.length; i++){
     radio[i].addEventListener('click', ()=> {
         clearInterval(interval);
-        setTimeout(()=>{
-            interval = setInterval(()=>{
-                nextImg();
-            }, 5000);
-        },20000)
-    })
+    });
 }
