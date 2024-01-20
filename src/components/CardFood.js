@@ -297,21 +297,24 @@ class CardFood extends HTMLElement {
             @media screen and (max-width: 900px) {
                 .card {
                     flex-direction: column;
-                    min-height: 100vh;
+                    min-height: 90vh;
                 }
                 .card__left {
-                    height: 100%;
                     width: 100%;
                     padding: 0;
                 }
                 .card__right {
-                    height: inherit;
+                    height: 30%;
+                    background-position: top;
                 }
                 .container_title, .container_description_buttons_food, .container_options{
                     padding: 5px;
                 }
                 .container_buttons_food {
                     justify-content: center;
+                }
+                .button {
+                    width: 40%;
                 }
                 .container_options {
                     margin-top: 10%;
@@ -321,9 +324,7 @@ class CardFood extends HTMLElement {
                     gap: 10%;
                 }
                 .artBackground {
-                    z-index: 0;
-                    background-size: 50%;
-                    background-position: bottom;
+                    display: none;
                 }
             }
 

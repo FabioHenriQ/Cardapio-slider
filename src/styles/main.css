@@ -94,7 +94,7 @@ body {
         animation-name: none;
     }
     .slider {
-        height: 200vh;
+        min-height: 145vh;
         border-radius: 0;
     }
     .nav-manual, .nav-auto {
